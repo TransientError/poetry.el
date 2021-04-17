@@ -6,6 +6,9 @@
 [[https://melpa.org/#/poetry][file:https://melpa.org/packages/poetry-badge.svg]]
 [[https://stable.melpa.org/#/poetry][file:https://stable.melpa.org/packages/poetry-badge.svg]]
 
+
+This is a personal fork where I switched the =poetry-get-virtual-env= to get the first virtual env after a PR changed the upstream to use the /current/ virtual env. The distinction is that you have to already be in the right virtual env when starting emacs to have the upstream plugin work, but this one will be able to "detect" the right virtual env to some extent. Ideally I would have a list you could choose from, but my elisp is not that good. I hope that this can help others.
+
 * Poetry.el
 
   [[https://poetry.eustace.io/][Poetry]] in Emacs.

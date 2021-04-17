@@ -895,7 +895,7 @@ If OPT is non-nil, set an optional dep."
                (concat (file-name-as-directory (poetry-find-project-root))
                        ".venv")
              ;; virtualenvs elsewhere
-             (let ((bufname (poetry-call 'env (list "info" "-p") nil nil t)))
+             (let ((bufname (poetry-call 'env (list "list" "--full-path") nil nil t)))
                (with-current-buffer bufname
                  (when (progn
                          (goto-char (point-min))
