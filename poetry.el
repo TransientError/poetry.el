@@ -604,7 +604,7 @@ It ensures that your python scripts are always executed in the right environment
   (when (not (string= (buffer-name) " *Minibuf-1*"))
   (cond
    ;; If in a poetry project, activate the associated virtualenv
-   ((and buffer-file-name (poetry-find-project-root) (poetry-get-virtualenv))
+   ((and buffer-file-name (equal "py" (file-name-extension buffer-file-name)) (poetry-find-project-root) (poetry-get-virtualenv))
     (let ((poetry-venv (poetry-get-virtualenv)))
       (when (and poetry-venv
                  (not (equal (file-name-as-directory poetry-venv)
